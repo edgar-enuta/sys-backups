@@ -122,11 +122,15 @@
 
 ## Terminal (Kitty)
 
+Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh word selection.
+
 | Shortcut | Action |
 |---|---|
 | Shift + Enter | Send escape + return |
-| Ctrl + Shift + S | Open scrollback in pager |
-| Ctrl + Shift + F5 | Reload config |
+| Alt + S | Open scrollback in pager |
+| Alt + F5 | Reload config |
+| Alt + C / Alt + V | Copy / paste (via kitty_mod) |
+| Ctrl + Shift + C / V | Copy / paste (explicit override) |
 
 ## Hardware Controls
 
