@@ -1,0 +1,42 @@
+#!/bin/bash
+# Opens URLs in whichever browser is currently running.
+# Falls back to rofi prompt if none are open.
+
+URL="$1"
+
+# Browser configs: process_name:executable
+BROWSERS=(
+    "chrome:google-chrome-stable"
+    "brave:brave"
+)
+
+# Check which browsers are running
+running=()
+for entry in "${BROWSERS[@]}"; do
+    proc="${entry%%:*}"
+    exe="${entry##*:}"
+    if pgrep -x "$proc" >/dev/null 2>&1; then
+        running+=("$exe")
+    fi
+done
+
+rofi_cmd() {
+    rofi -dmenu -p "Open with" -theme clipboard
+}
+
+case ${#running[@]} in
+    0)
+        # None running - prompt with rofi
+        choice=$(printf '%s\n' "${BROWSERS[@]##*:}" | rofi_cmd)
+        [[ -n "$choice" ]] && exec "$choice" "$URL"
+        ;;
+    1)
+        # One running - use it
+        exec "${running[0]}" "$URL"
+        ;;
+    *)
+        # Multiple running - prompt with rofi (only running ones)
+        choice=$(printf '%s\n' "${running[@]}" | rofi_cmd)
+        [[ -n "$choice" ]] && exec "$choice" "$URL"
+        ;;
+esac

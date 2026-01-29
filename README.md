@@ -190,3 +190,67 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 | Super + K | Toggle keyboard layout |
 | Super + Alt + G | Game mode |
 | Super + Shift + G | Game launcher |
+
+---
+
+# Setup Instructions
+
+## Browser Switcher
+
+Opens links in whichever browser (Chrome/Brave) is currently running. If none or multiple are open, shows a rofi prompt.
+
+**Script:** `scripts/browser-switcher`
+
+### Setup
+
+1. Create the `.desktop` file (adjust path to your sys-backups location):
+
+```bash
+cat > ~/.local/share/applications/browser-switcher.desktop << EOF
+[Desktop Entry]
+Name=Browser Switcher
+Comment=Opens URLs in the currently running browser
+Exec=$HOME/sys-backups/scripts/browser-switcher %u
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=x-scheme-handler/unknown;x-scheme-handler/about;text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+EOF
+```
+
+2. Update desktop database and set as default:
+
+```bash
+update-desktop-database ~/.local/share/applications/
+xdg-settings set default-web-browser browser-switcher.desktop
+```
+
+3. Verify:
+
+```bash
+xdg-settings get default-web-browser  # should show browser-switcher.desktop
+xdg-open https://example.com          # test it
+```
+
+### Customization
+
+Edit `scripts/browser-switcher` to add/remove browsers in the `BROWSERS` array:
+
+```bash
+BROWSERS=(
+    "process_name:executable"
+    "chrome:google-chrome-stable"
+    "brave:brave"
+    "firefox:firefox"
+)
+```
+
+## Kitty Terminal
+
+Config: `kitty/kitty.conf` (hardlink to `~/.config/kitty/kitty.conf`)
+
+### Hardlink Setup
+
+```bash
+ln -f ~/sys-backups/kitty/kitty.conf ~/.config/kitty/kitty.conf
+```
