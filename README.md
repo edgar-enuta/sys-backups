@@ -190,6 +190,7 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 | Super + K | Toggle keyboard layout |
 | Super + Alt + G | Game mode |
 | Super + Shift + G | Game launcher |
+| Super + H | Toggle hyprsunset (blue light filter) |
 
 ---
 
