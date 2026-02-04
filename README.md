@@ -132,6 +132,25 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 | Alt + C / Alt + V | Copy / paste (via kitty_mod) |
 | Ctrl + Shift + C / V | Copy / paste (explicit override) |
 
+### Windows/Splits
+
+| Shortcut | Action |
+|---|---|
+| Alt + Enter | New window/split |
+| Alt + Shift + Up | Focus window above |
+| Alt + Shift + Down | Focus window below |
+| Alt + Shift + Left | Focus window left |
+| Alt + Shift + Right | Focus window right |
+| Alt + ] / Alt + [ | Next/previous window (cycles) |
+
+### Tabs
+
+| Shortcut | Action |
+|---|---|
+| Alt + T | New tab |
+| Alt + Shift + T | Rename tab |
+| Alt + Left / Alt + Right | Previous/next tab |
+
 ## Hardware Controls
 
 ### Audio

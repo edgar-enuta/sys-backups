@@ -47,3 +47,7 @@ All config directories are hardlinked to their `~/.config/` counterparts:
 Non-hardlinked (repo-only):
 - `scripts/` - custom scripts
 - `README.md`, `CLAUDE.md`
+
+## Keybinding Documentation
+
+**Important:** Every new keybinding added to any config file must be documented in `README.md` under the appropriate section. The README serves as the single source of truth for all system shortcuts.
