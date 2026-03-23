@@ -174,8 +174,8 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 
 | Shortcut | Action |
 |---|---|
-| XF86MonBrightnessUp | Increase brightness |
-| XF86MonBrightnessDown | Decrease brightness |
+| XF86MonBrightnessUp | Increase dimness (hyprsunset gamma) |
+| XF86MonBrightnessDown | Decrease dimness (hyprsunset gamma) |
 
 ## Screenshot & Recording
 
@@ -204,7 +204,8 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 | Shortcut | Action |
 |---|---|
 | Super + L | Lock screen |
-| Ctrl + Alt + Delete | Logout menu |
+| Power Button | Suspend (sleep) |
+| Alt + Power Button | Power menu (sleep, shutdown, etc.) |
 | Alt_R + Ctrl_R | Toggle waybar |
 | Super + K | Toggle keyboard layout |
 | Super + Alt + G | Game mode |
