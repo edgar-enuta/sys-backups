@@ -128,6 +128,7 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 |---|---|
 | Shift + Enter | Send escape + return |
 | Alt + S | Open scrollback in pager |
+| Alt + / | Search scrollback in pager (kitty default, inherited via kitty_mod=alt) |
 | Alt + F5 | Reload config |
 | Alt + C / Alt + V | Copy / paste (via kitty_mod) |
 | Ctrl + Shift + C / V | Copy / paste (explicit override) |
