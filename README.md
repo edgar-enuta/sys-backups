@@ -206,7 +206,7 @@ Kitty modifier is set to **Alt** (`kitty_mod alt`) to free Ctrl+Shift for zsh wo
 | Super + L | Lock screen |
 | Power Button | Suspend (sleep) |
 | Alt + Power Button | Power menu (sleep, shutdown, etc.) |
-| Alt_R + Ctrl_R | Toggle waybar |
+| Alt_R + Ctrl_R | Toggle waybar visibility (right Alt + right Ctrl, runs `hyde-shell waybar --hide`). Hiding waybar makes windows appear fullscreen. HyDE default; defined in `hypr/keybindings.conf`. |
 | Super + K | Toggle keyboard layout |
 | Super + Alt + G | Game mode |
 | Super + Shift + G | Game launcher |
